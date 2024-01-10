@@ -5,6 +5,7 @@ import {
 	IFrontendFlashcard,
 	INewFlashcard,
 	IPromiseResolution,
+	ISiteEnvironment,
 	convertFlashcardToFrontendFlaschard,
 } from "./shared/interfaces";
 import axios from "axios";
@@ -18,7 +19,7 @@ interface IAppContext {
 	deleteFlashcard: (flashcard: IFlashcard) => Promise<IPromiseResolution>;
 	toggleRowEditing: (frontendFlashcard: IFrontendFlashcard) => void;
 	saveEditFlashcard: (flashcard: IFlashcard) => Promise<IPromiseResolution>;
-	siteEnvironment: string;
+	siteEnvironment: ISiteEnvironment;
 }
 
 interface IAppProvider {
