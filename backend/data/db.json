@@ -1,6 +1,12 @@
 {
   "flashcards": [
     {
+      "suuid": "cf8K8C",
+      "category": "linux",
+      "front": "how to find out the current directory",
+      "back": "pwd"
+    },
+    {
       "suuid": "82Js23",
       "category": "linux",
       "front": "how to find out your Linux shell",
