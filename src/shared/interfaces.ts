@@ -14,6 +14,10 @@ export interface IFlashcard extends INewFlashcard {
 	suuid: string;
 }
 
+export interface ITestingFlashcard extends IFlashcard {
+	backIsShowing: boolean;
+}
+
 export interface IFrontendFlashcard extends IFlashcard {
 	userIsDeleting: boolean;
 	userIsEditing: boolean;
@@ -38,6 +42,13 @@ export const convertFlashcardToFrontendFlaschard = (flashcard: IFlashcard): IFro
 		...flashcard,
 		userIsDeleting: false,
 		userIsEditing: false
+	}
+}
+
+export const convertFlashcardToTestingFlaschard = (flashcard: IFlashcard): ITestingFlashcard => {
+	return {
+		...flashcard,
+		backIsShowing: false
 	}
 }
 
